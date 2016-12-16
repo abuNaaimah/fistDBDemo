@@ -11,5 +11,9 @@
 @interface ViewController : UIViewController
 
 
+@property (weak, nonatomic) IBOutlet UITextField *txtFName;
+@property (weak, nonatomic) IBOutlet UITextField *txtLName;
+@property (weak, nonatomic) IBOutlet UITableView *tblView;
+
 @end
 

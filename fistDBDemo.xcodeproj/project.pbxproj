@@ -15,6 +15,9 @@
 		E79FA83F1D758C740080EB0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E79FA83D1D758C740080EB0F /* LaunchScreen.storyboard */; };
 		E79FA84A1D758C740080EB0F /* fistDBDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E79FA8491D758C740080EB0F /* fistDBDemoTests.m */; };
 		E79FA8551D758C740080EB0F /* fistDBDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E79FA8541D758C740080EB0F /* fistDBDemoUITests.m */; };
+		E79FA8631D758E830080EB0F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E79FA8621D758E830080EB0F /* libsqlite3.tbd */; };
+		E79FA8651D758EB80080EB0F /* myFirstDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = E79FA8641D758EB80080EB0F /* myFirstDB.sqlite */; };
+		E79FA8681D758F2C0080EB0F /* DataService.m in Sources */ = {isa = PBXBuildFile; fileRef = E79FA8671D758F2C0080EB0F /* DataService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,10 @@
 		E79FA8501D758C740080EB0F /* fistDBDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fistDBDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E79FA8541D758C740080EB0F /* fistDBDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fistDBDemoUITests.m; sourceTree = "<group>"; };
 		E79FA8561D758C740080EB0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E79FA8621D758E830080EB0F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		E79FA8641D758EB80080EB0F /* myFirstDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = myFirstDB.sqlite; path = ../../myFirstDB.sqlite; sourceTree = "<group>"; };
+		E79FA8661D758F2C0080EB0F /* DataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataService.h; sourceTree = "<group>"; };
+		E79FA8671D758F2C0080EB0F /* DataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E79FA8631D758E830080EB0F /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +89,7 @@
 		E79FA8231D758C730080EB0F = {
 			isa = PBXGroup;
 			children = (
+				E79FA8621D758E830080EB0F /* libsqlite3.tbd */,
 				E79FA82E1D758C740080EB0F /* fistDBDemo */,
 				E79FA8481D758C740080EB0F /* fistDBDemoTests */,
 				E79FA8531D758C740080EB0F /* fistDBDemoUITests */,
@@ -101,10 +110,13 @@
 		E79FA82E1D758C740080EB0F /* fistDBDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E79FA8641D758EB80080EB0F /* myFirstDB.sqlite */,
 				E79FA8321D758C740080EB0F /* AppDelegate.h */,
 				E79FA8331D758C740080EB0F /* AppDelegate.m */,
 				E79FA8351D758C740080EB0F /* ViewController.h */,
 				E79FA8361D758C740080EB0F /* ViewController.m */,
+				E79FA8661D758F2C0080EB0F /* DataService.h */,
+				E79FA8671D758F2C0080EB0F /* DataService.m */,
 				E79FA8381D758C740080EB0F /* Main.storyboard */,
 				E79FA83B1D758C740080EB0F /* Assets.xcassets */,
 				E79FA83D1D758C740080EB0F /* LaunchScreen.storyboard */,
@@ -243,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E79FA8651D758EB80080EB0F /* myFirstDB.sqlite in Resources */,
 				E79FA83F1D758C740080EB0F /* LaunchScreen.storyboard in Resources */,
 				E79FA83C1D758C740080EB0F /* Assets.xcassets in Resources */,
 				E79FA83A1D758C740080EB0F /* Main.storyboard in Resources */,
@@ -273,6 +286,7 @@
 				E79FA8371D758C740080EB0F /* ViewController.m in Sources */,
 				E79FA8341D758C740080EB0F /* AppDelegate.m in Sources */,
 				E79FA8311D758C740080EB0F /* main.m in Sources */,
+				E79FA8681D758F2C0080EB0F /* DataService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

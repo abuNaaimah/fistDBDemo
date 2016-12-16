@@ -24,4 +24,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnUpdate:(UIButton *)sender {
+}
+
+- (IBAction)btnDelete:(UIButton *)sender {
+}
+
+- (IBAction)btnSave:(UIButton *)sender {
+}
+
 @end

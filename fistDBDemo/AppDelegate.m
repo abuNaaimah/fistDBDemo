@@ -13,10 +13,26 @@
 @end
 
 @implementation AppDelegate
+@synthesize connectionPath;
 
+
+-(void)setDBPath {
+    
+    NSArray *arrDirec = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *tempString = [arrDirec objectAtIndex:0];
+    connectionPath = [tempString stringByAppendingPathComponent:@"myFirstDB.sqlite"];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:connectionPath]) {
+        NSString *strLocalDB = [[NSString alloc]initWithString:[[NSBundle mainBundle]pathForResource:@"myFirstDB" ofType:@"sqlite"]];
+        [[NSFileManager defaultManager]copyItemAtPath:strLocalDB toPath:connectionPath error:nil];
+    }
+    NSLog(@"%@",connectionPath);
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [self setDBPath];
+    
     return YES;
 }
 
